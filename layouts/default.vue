@@ -1,7 +1,13 @@
 <template>
   <div>
-    <div class="modal-overlay" :class="active" />
-    <Nuxt />
+    <Nav />
+    <div class="container default">
+      <div
+        class="modal-overlay"
+        :class="active"
+      />
+      <Nuxt />
+    </div>
   </div>
 </template>
 <script>
@@ -18,18 +24,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.modal-overlay {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  background: #6464646b;
-  z-index: 1;
-  transition: opacity 0.1s ease-out;
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
+@import '../assets/css/variable';
+
+.default {
+  padding-top: calc($nav_bar_height + 10px);
 }
 </style>

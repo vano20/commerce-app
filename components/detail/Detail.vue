@@ -49,7 +49,6 @@ export default {
 #detail-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px;
   .detail-title {
     font-size: 1.3rem;
     font-weight: bold;

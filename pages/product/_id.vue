@@ -82,25 +82,20 @@ export default {
     display: block;
   }
   #product-detail-container {
-    padding: 20px;
     display: grid;
-    grid-template-areas:
-      'gallery-container detail-container'
-      'gallery-container variant-container';
+    grid-template-areas: 'gallery-container detail-container variant-container';
     column-gap: 20px;
-    grid-template-columns: minmax(0, 240px) minmax(
-        0,
-        360px
-      );
+    grid-template-columns:
+      minmax(0, 240px) minmax(0, 450px)
+      minmax(0, 640px);
   }
 }
 @media only screen and (min-width: 1536px) {
   #product-detail-container {
     column-gap: 40px;
-    grid-template-columns: minmax(0, 348px) minmax(
-        0,
-        640px
-      );
+    grid-template-columns:
+      minmax(0, 348px) minmax(0, 640px)
+      minmax(0, 820px);
   }
 }
 </style>

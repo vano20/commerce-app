@@ -106,7 +106,7 @@ export default {
   border-top-right-radius: 10px;
   z-index: 2;
   height: 80px;
-  transition: height, 0.5s ease-out;
+  transition: height 0.5s ease-out;
   .action-wrapper {
     display: flex;
     flex-flow: column;
