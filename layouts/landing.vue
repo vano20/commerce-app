@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-layout">
+  <div class="container">
     <Nuxt />
   </div>
 </template>
@@ -8,8 +8,4 @@ export default {
   name: 'LandingLayout'
 }
 </script>
-<style lang="scss" scoped>
-.landing-layout {
-  padding: 10px;
-}
-</style>
+<style lang="scss" scoped></style>
