@@ -34,16 +34,28 @@ button {
   margin: 20px 0;
 }
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: #6464646b;
+  z-index: 1;
+  transition: opacity 0.1s ease-out;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .container {
     width: 750px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 @media only screen and (min-width: 1024px) {

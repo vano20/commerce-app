@@ -1,0 +1,31 @@
+.main-nav {
+  position: fixed;
+  width: 100%;
+  height: $nav_bar_height;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 5px 10px #6464644d;
+  .nav-wrapper {
+    display: flex;
+    flex-wrap: row wrap;
+    padding: 10px 10px;
+    a {
+      margin-right: 10px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  &.right {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-wrapper {
+    padding: 10px 0;
+  }
+}
