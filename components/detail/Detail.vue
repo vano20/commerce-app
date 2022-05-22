@@ -1,7 +1,7 @@
 <template>
   <div id="detail-container">
     <div class="detail-title">
-      {{ `${title}` }}
+      {{ title }}
     </div>
     <div class="detail-price">
       {{ formattedPrice }}
@@ -79,6 +79,8 @@ export default {
 }
 @media only screen and (min-width: 1280px) {
   #detail-container {
+    padding-bottom: 0;
+    margin-bottom: 50px;
     .detail-title {
       font-size: 1rem;
       padding: 0;

@@ -5,18 +5,25 @@
     "
     id="product-detail-container"
   >
-    <Gallery :images="product.images" />
+    <Gallery
+      :images="product.images"
+      class="gallery-grid"
+    />
     <Detail
       :title="product.title"
       :price="product.price"
       :description="product.description"
       :category="product.category"
+      class="detail-grid"
     />
     <FloatingAction>
       <template #variant>
         <Variant />
       </template>
     </FloatingAction>
+    <div id="variant-container">
+      <Variant />
+    </div>
   </div>
 </template>
 <script>
@@ -60,11 +67,26 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.gallery-grid {
+  grid-area: gallery-container;
+}
+.detail-grid {
+  grid-area: detail-container;
+}
+#variant-container {
+  grid-area: variant-container;
+  display: none;
+}
 @media only screen and (min-width: 1280px) {
+  #variant-container {
+    display: block;
+  }
   #product-detail-container {
     padding: 20px;
     display: grid;
-    grid-template-areas: 'gallery-container detail-container';
+    grid-template-areas:
+      'gallery-container detail-container'
+      'gallery-container variant-container';
     column-gap: 20px;
     grid-template-columns: minmax(0, 240px) minmax(
         0,

@@ -130,6 +130,7 @@ export default {
     gap: 10px;
   }
   & &-items {
+    cursor: pointer;
     background: rgba(
       $color: #eb515177,
       $alpha: 0.5
