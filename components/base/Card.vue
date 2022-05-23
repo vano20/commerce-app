@@ -4,10 +4,7 @@
       <NuxtImg
         :src="image"
         :alt="`image of ${title}`"
-        width="240"
-        height="160"
         loading="lazy"
-        fit="cover"
         class="card-image"
       />
     </div>
@@ -47,6 +44,11 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   max-width: 242px;
+  & &-image {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+  }
   & &-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
