@@ -47,7 +47,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxt/image'
+    [
+      '@nuxt/image',
+      {
+        provider: 'static',
+        dir: 'assets/images'
+      }
+    ]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
