@@ -21,7 +21,7 @@ export default {
   components: { Product },
   layout: 'landing',
   async fetch() {
-    await this.$nuxt.$store.dispatch(
+    await this.$store.dispatch(
       'getProducts'
     )
   },

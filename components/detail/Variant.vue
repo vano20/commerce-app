@@ -5,7 +5,7 @@
     </div>
     <div class="divider" />
     <div
-      v-for="(variant, variantIndex) in variance"
+      v-for="(variant, variantIndex) in variants"
       :key="variantIndex"
     >
       <div class="variant-title">
@@ -41,34 +41,14 @@
 <script>
 export default {
   name: 'ProductVariant',
+  props: {
+    variants: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {
-      variance: [
-        {
-          id: 1,
-          title: 'Size',
-          items: [
-            {
-              text: '60%',
-              inStock: true
-            }
-          ]
-        },
-        {
-          id: 2,
-          title: 'Color',
-          items: [
-            {
-              text: 'White',
-              inStock: true
-            },
-            {
-              text: 'Black',
-              inStock: false
-            }
-          ]
-        }
-      ],
       selectedVariant: []
     }
   },

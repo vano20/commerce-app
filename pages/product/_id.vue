@@ -18,11 +18,11 @@
     />
     <FloatingAction>
       <template #variant>
-        <Variant />
+        <Variant :variants="product.variants" />
       </template>
     </FloatingAction>
     <div id="variant-container">
-      <Variant />
+      <Variant :variants="product.variants" />
     </div>
   </div>
 </template>
