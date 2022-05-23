@@ -134,11 +134,11 @@ export default {
   }
 }
 @media only screen and (min-width: 768px) {
-  .variant-header {
-    display: none;
-  }
   .variant {
     .divider {
+      display: none;
+    }
+    &-header {
       display: none;
     }
   }

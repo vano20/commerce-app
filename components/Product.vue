@@ -15,7 +15,7 @@
   </Card>
 </template>
 <script>
-import Card from './base/Card.vue'
+import Card from '@/components/base/Card.vue'
 import { toRp } from '@/helper/currency'
 
 export default {

@@ -1,9 +1,9 @@
-export default function (context) {
-  context.$axios.onError((error) => {
+export default function ({ $axios, error }) {
+  $axios.onError((error) => {
     const notFound =
       error?.response?.status === 404
     if (notFound) {
-      context.error({
+      error({
         statusCode: 404,
         message: error.message
       })

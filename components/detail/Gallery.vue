@@ -14,40 +14,17 @@
         class="mobile slider next"
         @click="selected++"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-chevron-right"
-        >
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
+        <ChevronRight
+          :size="30"
+          color="#ffffff"
+        />
       </div>
       <div
         v-if="isCanPrev"
         class="mobile slider prev"
         @click="selected--"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#ffffff"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-chevron-left"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
+        <ChevronLeft :size="30" color="#ffffff" />
       </div>
       <div class="mobile dots">
         <div
@@ -75,8 +52,12 @@
   </div>
 </template>
 <script>
+import ChevronRight from '@/components/svg-icons/ChevronRight.vue'
+import ChevronLeft from '@/components/svg-icons/ChevronLeft.vue'
+
 export default {
   name: 'ProductGallery',
+  components: { ChevronRight, ChevronLeft },
   props: {
     images: {
       type: Array,

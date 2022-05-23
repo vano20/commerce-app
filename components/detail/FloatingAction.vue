@@ -8,36 +8,16 @@
         id="modal-handler"
         @click="toggleAddItemModal"
       >
-        <svg
+        <ChevronUp
           v-show="!showModalAddItem"
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#bd3136"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-chevron-up"
-        >
-          <polyline points="18 15 12 9 6 15" />
-        </svg>
-        <svg
+          :size="30"
+          color="#bd3136"
+        />
+        <ChevronDown
           v-show="showModalAddItem"
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#bd3136"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="feather feather-chevron-down"
-        >
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
+          :size="30"
+          color="#bd3136"
+        />
       </button>
       <slot name="variant" />
     </div>
@@ -45,9 +25,12 @@
 </template>
 <script>
 import { mapMutations, mapState } from 'vuex'
+import ChevronUp from '@/components/svg-icons/ChevronUp.vue'
+import ChevronDown from '@/components/svg-icons/ChevronDown.vue'
 
 export default {
   name: 'FloatingAction',
+  components: { ChevronUp, ChevronDown },
   data() {
     return {
       modalAddItemClass: [],

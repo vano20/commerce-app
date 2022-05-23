@@ -1,16 +1,16 @@
 <template>
   <div id="detail-container">
-    <div class="detail-title">
+    <div class="detail detail-title">
       {{ title }}
     </div>
-    <div class="detail-price">
+    <div class="detail detail-price">
       {{ formattedPrice }}
     </div>
     <div class="divider" />
-    <div class="detail-description">
+    <div class="detail detail-description">
       {{ description }}
     </div>
-    <div class="detail-category">
+    <div class="detail detail-category">
       Category: <span>{{ category }}</span>
     </div>
   </div>
@@ -49,30 +49,29 @@ export default {
 #detail-container {
   display: flex;
   flex-direction: column;
-  .detail-title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 4px;
+  .detail {
     padding: 0 10px;
-  }
-  .detail-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 4px;
-    padding: 0 10px;
-  }
-  .detail-description {
-    margin-bottom: 20px;
-    word-break: break-all;
-    padding: 0 10px;
-  }
-  .detail-category {
-    padding: 0 10px;
-    font-size: 1rem;
-    color: rgb(110, 110, 110);
-    span {
-      color: rgb(31, 31, 31);
-      text-transform: capitalize;
+    &-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    &-price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    &-description {
+      margin-bottom: 20px;
+      word-break: break-all;
+    }
+    &-category {
+      font-size: 1rem;
+      color: rgb(110, 110, 110);
+      span {
+        color: rgb(31, 31, 31);
+        text-transform: capitalize;
+      }
     }
   }
 }
@@ -80,37 +79,38 @@ export default {
   #detail-container {
     padding-bottom: 0;
     margin-bottom: 50px;
-    .detail-title {
-      font-size: 1rem;
+    .detail {
       padding: 0;
-    }
-    .detail-price {
-      font-size: 1.3rem;
-      padding: 0;
-    }
-    .detail-description {
-      font-size: 1rem;
-      padding: 0;
-    }
-    .detail-category {
-      font-size: 0.8rem;
-      padding: 0;
+      &-title {
+        font-size: 1rem;
+      }
+      &-price {
+        font-size: 1.3rem;
+      }
+      &-description {
+        font-size: 1rem;
+      }
+      &-category {
+        font-size: 0.8rem;
+      }
     }
   }
 }
 @media only screen and (min-width: 1536px) {
   #detail-container {
-    .detail-title {
-      font-size: 1.3rem;
-    }
-    .detail-price {
-      font-size: 1.5rem;
-    }
-    .detail-description {
-      font-size: 1.2rem;
-    }
-    .detail-category {
-      font-size: 1rem;
+    .detail {
+      &-title {
+        font-size: 1.3rem;
+      }
+      &-price {
+        font-size: 1.5rem;
+      }
+      &-description {
+        font-size: 1.2rem;
+      }
+      &-category {
+        font-size: 1rem;
+      }
     }
   }
 }
