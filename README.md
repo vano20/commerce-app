@@ -1,5 +1,7 @@
 # commerce-app
 
+## Description
+e-commerce web for learning purpose using Nuxt.js and `my-json-server.typicode` for mock up API
 ## Build Setup
 
 ```bash
